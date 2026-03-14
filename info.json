@@ -1,10 +1,45 @@
 {
-  "id": "plugin.com.pot-app.lingva",
+  "id": "plugin.com.usoQAQ.openapi"，
   "plugin_type": "translate",
-  "icon": "lingva.svg",
-  "display": "Lingva",
-  "homepage": "https://github.com/pot-app/pot-app-translate-plugin-template",
-  "needs": [{ "key": "requestPath", "display": "请求地址" }],
+  "icon": "openapi.svg",
+  "display": "OpenAPI",
+  "homepage": "",
+  "needs": [
+    {
+      "key": "apiUrl",
+      "display": "请求地址",
+      "type": "input",
+      "default": ""
+    },
+    {
+      "key": "apiKey",
+      "display": "API Key",
+      "type": "input"
+    },
+    {
+      "key": "model",
+      "display": "模型名称",
+      "type": "input",
+      "default": ""
+    },
+    {
+      "key": "systemPrompt",
+      "display": "自定义提示词",
+      "type": "input",
+      "default": ""
+    },
+    {
+      "key": "stream",
+      "display": "流式输出",
+      "type": "select",
+      "options": {
+        "false": "关闭",
+        "openai": "开启(OpenAI格式(单换行))",
+        "zhipu": "开启(兼容格式(双换行))"
+      },
+      "default": "false"
+    }
+  ],
   "language": {
     "auto": "auto",
     "zh_cn": "zh",
